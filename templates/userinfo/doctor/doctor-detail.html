@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if doctor %}
+    {% if doctor.profile_image %}
+          <img src="{{ doctor.profile_image.url }}" width="240" alt="profile_pic">
+    {% endif %}
+    <p>Username: {{doctor.user}}</p>
+    <p>Profile name: {{doctor.profile_name}}</p>
+    <p>Title: {{doctor.title}}</p>
+    <p>Gender: {{doctor.gender}}</p>
+    <p>Division: {{doctor.division}}</p>
+    <p>District: {{doctor.district}}</p>
+    <p>Interest: {{doctor.interest}}</p>
+    <p>Birth Day: {{doctor.birth_day}}</p>
+    <p>Phone number: {{doctor.phone}}</p>
+    <p>Qualaification: {{doctor.qualification}}</p>
+    <p><a href="{% url 'doctor-edit' %}">Edit</a></p>
+    <p><a href="">Post your Research.</a></p>
+{% else %}
+    <h1> {{ errmsg }} </h1>
+    <hr>
+    <h3><a href="{% url 'doctor-create' %}">Create </a>your profile</h3>
+{% endif %}
+
+{% endblock %}

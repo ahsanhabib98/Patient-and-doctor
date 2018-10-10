@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'layout/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+     .active-cyan-3 input[type=text] {
+    border: 1px solid #4dd0e1;
+    box-shadow: 0 0 0 1px #4dd0e1;
+}
+</style>
+<body>
+	<div class="top-nav">
+
+				<div class="container">
+						<div class="row">
+							<div class="col-sm-4">
+									<div class="top-header-left">
+											<img src="{% static 'images/logo.jpg' %}">
+										</div>
+							</div>
+							<div class="col-sm-8">
+									<div class="top-header-right">
+										<ul>
+											{% if request.user.is_authenticated %}
+												<li class="btn btn-outline-dark"><a href="{% url 'logout' %}">Logout</a></li>
+												<li class="btn btn-outline-dark"><a href="{% url 'profile' %}">Profile</a></li>
+											{% else %}
+												<li class="btn btn-outline-dark"><a href="{% url 'login' %}">Login</a></li>
+												<li class="btn btn-outline-dark"><a href="{% url 'signup' %}">Register</a></li>
+											{% endif %}
+
+										</ul>
+										</div>
+							</div>
+						</div>
+				</div>
+
+	</div>
+	<nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+		<div class="container">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">HOME</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'patients' %}">PATIENTS</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'present-mode' %}">ALL MODE</a></li>
+				{% if request.user.is_authenticated %}
+          <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">MY HEALTH</a></li>
+				{% endif %}
+					<li class="nav-item"><a class="nav-link" href="{% url 'disease-category' %}">CONDITIONS</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'medicine-category' %}">TREATMENTS</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'symptoms' %}">SYMPTOMS</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'research' %}">RESEARCH</a></li>
+				</ul>
+			</div>
+		</div>
+    </nav>
+
+		<div class="active-cyan-3 active-cyan-4 mb-4">
+				<form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'disease-category' %}">
+					<input class="form-control" type="text" name="q" placeholder="Search Conditions">
+				</form>
+		</div>
+    <div class="container">
+             <hr>
+
+            <h3 style="text-align: center">Featured conditions at PHSI</h3>
+            <h6 style="text-align: center">Members are tracking more than (count) conditions on PHSI</h6>
+
+            <br>
+        <div class="row">
+
+            <!-- <div class="col-sm-12"> -->
+                <table class="table table-borderless">
+
+									{% for category in category %}
+                    <tr>
+                        <th>{{category.name}}</th>
+
+                    </tr>
+
+                    <tr>
+											{% for sub in category.disease.all %}
+                        <td><a href="{% url 'diseasewise-symptoms' sub.id %}"> {{sub.name}}</a></td>
+												{% endfor %}
+                    </tr>
+									{% endfor %}
+
+
+                </table>
+            </div>
+       <!-- </div> -->
+    </div>
+</body>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="index.html"> PHSI.COM</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</html>

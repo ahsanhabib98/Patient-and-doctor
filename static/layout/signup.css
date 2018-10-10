@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #C0C0C0;
+
+}
+.wrap{
+	width: 1200px;
+	background-color: white;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.header{
+	width: auto;
+	min-height: 100px;
+	
+	background-color: white;
+
+	overflow: hidden;
+}
+.header .top-header-left{
+	width: 200px;
+    height: 100px;
+    
+    float: left;
+}
+.header .top-header-left img{
+	width: 200px;
+    height: 100px;
+	float: left;
+	border-style: none;
+	
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	clear: left;
+	opacity: 1.0;
+	transition: opacity 0.5 ease-in-out;
+}
+.header .top-header-left img:hover{
+	opacity: 0.4;
+}
+
+/* header logo part end*/
+/*top-header-right login signup part*/
+.header .top-header-right{
+	width: 280px;
+	float: right;
+	margin-top: 20px;
+}
+.header .top-header-right ul li{
+	display: inline-block;
+	margin-right:  20px;
+}
+.header .top-header-right ul li a{
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	font-size: 22px;
+	border-bottom: hidden;
+	text-decoration: none;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	background:  #58D68D;
+	padding:  10px;
+}
+.header .top-header-right ul li a:hover{
+	color:#303030;
+}
+/* top header right login and sign up end */
+
+
+/* nav bar Start */
+
+.nav{
+	width: 100%;
+	
+	position: relative;
+    font-size: 18px;
+    
+	margin-bottom: 0px;
+	margin-top: 0px;
+	background-color: #186A3B  ;
+}
+
+.nav ul li{
+   display: inline-block;
+   list-style: none;
+
+} 
+.nav ul li a{
+    font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFF;
+	padding: 20px 30px;
+	display: block;
+	
+	text-transform: uppercase;
+	text-decoration: none;
+	
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	
+}
+
+.nav ul li a:hover{
+	color: #FFF;
+	background:#A9DFBF;
+}
+
+/*------- Nav bar end ------------*/
+
+/* -----container side-left ------*/
+.container .side-left{
+	background-color: white;
+	width: 260px;
+	padding: 5px;
+	margin-left: 0px;
+	margin-top: 0px;
+	border-style: none;
+	float: left;
+	font-size: 105%;
+  
+}
+
+
+/* -----container side-left End ------*/
+
+/* -----container content start ------*/
+.container .content{
+	background-color: white;
+	width: 930px ;
+	margin-left: 10px;  
+    border-style: none;
+    padding: 50px;
+    font-size: 110%;
+    float: left;
+    
+}
+/* Full-width input fields */
+.container .content input[type=text], input[type=password] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+/* Add a background color when the inputs get focus */
+.container .content input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+/* Set a style for all buttons */
+.container .content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    opacity: 0.9;
+}
+.container .content button:hover {
+    opacity:1;
+}
+/* Extra styles for the cancel button */
+.container .content .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+/* Float cancel and signup buttons and add an equal width */
+.container .content .cancelbtn, .signupbtn {
+  float: left;
+  width: 25%;
+}
+/* Add padding to container elements */
+.container .content .container {
+    padding: 16px;
+}
+/* The Modal (background) */
+.container .content .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.container .content .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+/* Style the horizontal ruler */
+.container .content hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+ /* The Close Button (x) */
+ .container .content .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+.container .content .close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+/* Clear floats */
+.container .content .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+/* -----container content end ------*/
+
+/* Footer start*/
+.footer{
+    background-color: #F2F3F4;
+	padding: 10px;
+    list-style-type: none;
+    text-align: center;
+    margin: 0px;
+    border: 0;
+    overflow: hidden;
+}
+
+
+
+
+/* Footer End*/

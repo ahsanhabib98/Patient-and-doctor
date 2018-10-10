@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #C0C0C0;
+
+}
+.wrap{
+	width: 1200px;
+	background-color: white;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.header{
+	width: auto;
+	min-height: 100px;
+	
+	background-color: white;
+
+	overflow: hidden;
+}
+.header .top-header-left{
+	width: 200px;
+    height: 100px;
+    
+    float: left;
+}
+.header .top-header-left img{
+	width: 200px;
+    height: 100px;
+	float: left;
+	border-style: none;
+	
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	clear: left;
+	opacity: 1.0;
+	transition: opacity 0.5 ease-in-out;
+}
+.header .top-header-left img:hover{
+	opacity: 0.4;
+}
+
+/* header logo part end*/
+/*top-header-right login signup part*/
+.header .top-header-right{
+	width: 280px;
+	float: right;
+	margin-top: 20px;
+}
+.header .top-header-right ul li{
+	display: inline-block;
+	margin-right:  20px;
+}
+.header .top-header-right ul li a{
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	font-size: 22px;
+	border-bottom: hidden;
+	text-decoration: none;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	background:  #58D68D;
+	padding:  10px;
+}
+.header .top-header-right ul li a:hover{
+	color:#303030;
+}
+/* top header right login and sign up end */
+
+
+/* nav bar Start */
+
+.nav{
+	width: 100%;
+	
+	position: relative;
+    font-size: 18px;
+    
+	margin-bottom: 0px;
+	margin-top: 0px;
+	background-color: #186A3B  ;
+}
+
+.nav ul li{
+   display: inline-block;
+   list-style: none;
+
+} 
+.nav ul li a{
+    font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFF;
+	padding: 20px 30px;
+	display: block;
+	
+	text-transform: uppercase;
+	text-decoration: none;
+	
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	
+}
+
+.nav ul li a:hover{
+	color: #FFF;
+	background:#A9DFBF;
+}
+
+/*------- Nav bar end ------------*/
+
+/* -----container side-left ------*/
+.container .side-left{
+	background-color: white;
+	width: 260px;
+	padding: 5px;
+	margin-left: 0px;
+	margin-top: 0px;
+	border-style: none;
+	float: left;
+	font-size: 105%;
+  
+}
+/* Filter patients part*/
+.container .side-left .custom-select{
+	position: relative;
+	font-family: Arial;
+
+
+}/*
+.container .side-left .custom-select select{
+	display: none;
+}
+.container .side-left .select-selected{
+	background-color: Blue;
+
+}
+.container .side-left .select-selected:after{
+	 position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+
+
+}
+*/
+
+/* -----container side-left End ------*/
+
+/* -----container content start ------*/
+.container .content{
+	background-color: white;
+	width: 930px ;
+	margin-left: 10px;  
+    border-style: none;
+    padding: 50px;
+    font-size: 110%;
+    float: left;
+    
+}
+/* Post box */
+/*-- Content Style --*/
+.container .content .post-footer-option li{
+
+    float:left;
+    margin-right:50px;
+    padding-bottom:15px;
+}
+
+.container .content .post-footer-option li a{
+    color:#AFB4BD;
+    font-weight:500px;
+    font-size:1.3rem;
+}
+
+.container .content.photo-profile{
+    border:1px solid #DDD;    
+}
+
+.container .content .anchor-username h4{
+    font-weight:bold;    
+}
+
+.container .content .anchor-time{
+    color:#ADB2BB;
+    font-size:1.2rem;
+}
+
+.container .content .post-footer-comment-wrapper{
+    background-color:#F6F7F8;
+}
+
+/*Login page start*/
+
+.container .content .login-box{
+	width: 320px;
+    height: 420px;
+    background: #A6ACAF  ;
+    color: #fff;
+    top: 80%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.container .content .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+ .container .content h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.container .content .login-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+ .container .content .login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container .content .login-box input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.container .content .login-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.container .content .login-box input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+}
+.container .content .login-box a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.container .content .login-box a:hover
+{
+    color: #39dc79;
+}
+
+/*---------Login page end ------*/
+
+
+/* -----container content end ------*/
+
+/* Footer start*/
+.footer{
+    background-color: #F2F3F4;
+	padding: 10px;
+    list-style-type: none;
+    text-align: center;
+    margin: 0px;
+    border: 0;
+    overflow: hidden;
+}
+
+/*  Footer End  */ 

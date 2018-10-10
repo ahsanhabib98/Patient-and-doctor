@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'layout/style.css' %}">
+
+	<!--Add -->
+	<meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Style add-->
+<style>
+.hexagon {
+  position: relative;
+  width: 180px;
+  height: 103.92px;
+  background-color: #F6DDCC;
+  margin: 51.96px 0;
+  border-left: solid 5px #808080;
+  border-right: solid 5px #808080;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 127.28px;
+  height: 127.28px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 21.3604px;
+}
+
+.hexagon:before {
+  top: -63.6396px;
+  border-top: solid 7.0711px #808080;
+  border-right: solid 7.0711px #808080;
+}
+
+.hexagon:after {
+  bottom: -63.6396px;
+  border-bottom: solid 7.0711px #808080;
+  border-left: solid 7.0711px #808080;
+}
+
+.hexText{
+    position: absolute;
+    text-align: center;
+    top: 59px;
+    z-index: 999;
+    left: 9%;
+    text-align:center;
+}
+
+
+.bgGrey{
+    background: #e7e6e6 !important;
+}
+.video {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-left: 110px;
+    padding-bottom: 30px;
+}
+
+
+</style>
+</head>
+<body>
+	<div class="top-nav">
+			<div class="container">
+
+						<div class="row">
+							<div class="col-sm-4">
+									<div class="top-header-left">
+											<img src="{% static 'images/logo.jpg' %}">
+										</div>
+							</div>
+							<div class="col-sm-8">
+									<div class="top-header-right">
+											<ul>
+												{% if request.user.is_authenticated %}
+					            		<li class="btn btn-outline-dark"><a href="{% url 'logout' %}">Logout</a></li>
+					            		<li class="btn btn-outline-dark"><a href="{% url 'profile' %}">Profile</a></li>
+					            	{% else %}
+					            	  <li class="btn btn-outline-dark"><a href="{% url 'login' %}">Login</a></li>
+					                <li class="btn btn-outline-dark"><a href="{% url 'signup' %}">Register</a></li>
+					            	{% endif %}
+
+											</ul>
+										</div>
+							</div>
+						</div>
+				</div>
+
+	</div>
+	<nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+		<div class="container">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">HOME</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'patients' %}">PATIENTS</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'present-mode' %}">ALL MODE</a></li>
+				{% if request.user.is_authenticated %}
+          <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">MY HEALTH</a></li>
+				{% endif %}
+					<li class="nav-item"><a class="nav-link" href="{% url 'disease-category' %}">CONDITIONS</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'medicine-category' %}">TREATMENTS</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'symptoms' %}">SYMPTOMS</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'research' %}">RESEARCH</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	{% block content %}
+
+	{% endblock %}
+
+</body>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="index.html"> PHSI.COM</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</html>

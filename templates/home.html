@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="{% static 'images/slider01.jpg' %}" alt="slider01" style="width:100%; height: 400px;">
+      </div>
+
+      <div class="item">
+        <img src="{% static 'images/slider123.jpg' %}" alt="slider123" style="width:100%; height: 400px;">
+      </div>
+
+      <div class="item">
+        <img src="{% static 'images/slider03.jpg' %}" alt="slider03" style="width:100%; height: 400px;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+    <!-- Carousel end -->
+
+    <div class="index-first-row">
+    	<div class="row">
+    		<div class="col-lg-12">
+    			<h4 style="text-align: center; padding-top: 30px" >Using a cross-sectional online survey, we seek to describe the<br> potential benefits of AFPHSI in terms .</h4>
+    			<hr width="50%">
+    		</div>
+
+
+    	</div>
+
+
+    </div>
+
+    <!-- index-second-row -->
+    <div class="index-second-row">
+    	<div class="row">
+    		<div class="col-sm-4">
+
+	    		    <div class="hexagon"></div>
+	                    <h3 class="hexText"><span><a href="#"><b>ASK</b><br>QUESTIONS</a></span></h3>
+	                </div>
+			    		<div class="col-sm-4">
+
+				    		    <div class="hexagon"></div>
+				                    <h3 class="hexText"><span><a href="#"><b>HEAL</b><br>TOGETHER</a></span></h3>
+				                </div>
+							        <div class="col-sm-4">
+
+							    		    <div class="hexagon"></div>
+							                    <h3 class="hexText"><span><a href="#"><b>DEFY</b><br>THE ODDS</a></span></h3>
+							                </div>
+
+
+    		                        </div>
+
+    	                </div>
+
+
+             </div>
+             <hr width="80%">
+    <!-- index-third row -->
+
+      <div class="index-second-row">
+    	<div class="row">
+    		<div class="col-sm-4">
+
+		    		    <div class="video">
+		                     <video width="400" controls>
+						            <source src="mov_bbb.mp4" type="video/mp4">
+						            <source src="mov_bbb.ogg" type="video/ogg">
+						             Your browser does not support PHSI video.
+					        </video>
+					    </div>
+	        </div>
+			    <div class="col-sm-6">
+
+				        <h3 style="text-align: center; padding-top: 60px; padding-left: 100px;">What is good care ?</h3>
+				        <p style="text-align: left; width: auto; padding-left: 100px;">A recent study, conducted with support from the Robert Wood Johnson Foundation, reveals how patients answer the question.</p>
+				</div>
+
+
+    	    </div>
+
+
+        </div>
+        <hr width="80%">
+
+    <div class="index-second-row" style="height: 200px">
+    	<div class="row">
+    		<div class="col-sm-2">
+
+		    		    <div class="glyphicon" style="align-items: center; padding-left: 170px">
+		                     <h1><span class="glyphicon glyphicon-user"></span></h1>
+		                     <h4>Members</h4>
+		                     <h5>60+</h5>
+
+					    </div>
+	        </div>
+			    <div class="col-sm-2">
+			    		<div class="glyphicon" style="align-items: center; padding-left: 170px">
+		                     <h1><span class="glyphicon glyphicon-plus"></span></h1>
+		                     <h4>Conditions</h4>
+		                     <h5>100+</h5>
+
+					    </div>
+
+				</div>
+				<div class="col-sm-3">
+			    		<div class="glyphicon" style="align-items: center; padding-left: 170px">
+		                     <h1><span class="glyphicon glyphicon-book"></span></h1>
+		                     <h4>Research Study</h4>
+		                     <h5>50+</h5>
+
+					    </div>
+
+				</div>
+        <div class="col-sm-4">
+              <div class="glyphicon" style="align-items: center; padding-left: 170px">
+                         <h1><span class="glyphicon glyphicon-list-alt"></span></h1>
+                         <h4>Data points about disease</h4>
+                         <h5>50+</h5>
+
+              </div>
+
+        </div>
+
+							 <hr width="80%">
+
+    	    </div>
+
+
+        </div>
+
+{% endblock %}

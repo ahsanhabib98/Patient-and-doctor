@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+	<br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-2">
+				<nav class="navbar bg-light">
+
+						<!-- Links -->
+						<ul class="navbar-nav">
+						  <li class="nav-item">
+							<a class="nav-link" href="#">About Me</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">Daily Me</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">My Conditions</a>
+						  </li>
+						  <li class="nav-item">
+						     <a class="nav-link" href="#">My Symptoms</a>
+						  </li>
+						  <li class="nav-item">
+						     <a class="nav-link" href="#">My Treatments</a>
+						  </li>
+						  <li class="nav-item">
+						     <a class="nav-link" href="#">My Updates</a>
+						  </li>
+						  <li class="nav-item">
+						     <a class="nav-link" href="#">Monthly Me</a>
+						  </li>
+						  <li class="nav-item">
+						     <a class="nav-link" href="#">Hospitalization</a>
+						  </li>
+						  <li class="nav-item">
+						     <a class="nav-link" href="#">Lab and Test</a>
+						  </li>
+						  <li class="nav-item">
+						     <a class="nav-link" href="#">Weight</a>
+						  </li>
+						  <li class="nav-item">
+						     <a class="nav-link" href="#">My Charts</a>
+						  </li>
+						</ul>
+
+					  </nav>
+		</div>
+		<div class="col-sm-10">
+				<div>
+					<h1>Help us get to know you </h1>
+					<p>Tell the community about yourself so they can get to know you better. Answering questions with the  icon connects your health data to real-time research.</p>
+			    </div>
+		<div class="col-sm-4">
+      {% if patient %}
+              {% if patient.profile_image %}
+            			<div class="profile_photo" style=" background-color: #D8D6D4; width: 700px; height: 300px; border: 0.5px solid white; padding-top:40px; margin: 10px">
+                            <div class="col-sm-4">
+            	                <div align="top-header-left">
+            	                	<h3 style="text-align: left; padding-bottom: 10px"> Profile Photo</h3>
+            	                	<img src="{{ patient.profile_image.url }}" class="img-circle" alt="Lutfor_Rahman" width="204" height="136">
+
+            	                </div>
+                            </div>
+                            <div class="col-sm-4" style="align-content: center;">
+            		                <div align="top-header-right">
+            		                	<div class="btn-group-vertical" style="padding-top: 70px">
+
+            							</div>
+
+            		                </div>
+            				</div>
+            			</div>
+                {% endif %}
+		
+                           <!-- Edit and add  -->
+                            <div class="form-group">
+                              <h4>Profile Name : {{patient.profile_name}}</h4>
+                            </div>
+
+                            <div class="form-group">
+                              <h4>Title : {{patient.title}}</h4>
+                            </div>
+                            <div class="form-group">
+                              <h4>Gender : {{patient.gender}}</h4>
+                            </div>
+
+                            <div class="form-group">
+                              <h4>Division : {{patient.division}}</h4>
+                            </div>
+                            <div class="form-group">
+                              <h4>District : {{patient.district}}</h4>
+                            </div>
+
+                            <div class="form-group">
+                              <h4>Birthday : {{patient.birth_day}}</h4>
+                            </div>
+
+                            <div class="form-group">
+                              <h4>Prescription : {{patient.prescription}}</h4>
+                            </div>
+                            <div class="form-group">
+                              <h4>Interest : {{patient.interest}}</h4>
+                            </div>
+          {% else %}
+            <h1> {{ errmsg }} </h1>
+            <hr>
+            <h3><a href="{% url 'patient-create' %}">Create </a>your profile</h3>
+          {% endif %}
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+		</div>
+
+{% endblock %}

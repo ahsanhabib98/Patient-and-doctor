@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<h1>What is {{slug}} ?</h1>
+	{% for s in symptom %}
+		<h2>{{s.details}}</h2>
+	{% endfor %}
+	{% for symptom in symptoms %}
+		<h2>{{symptom.disease.name}}</h2>
+		{% for medicine in symptom.medicines.all %}
+			<h3>{{medicine.name}}</h3>
+		{% endfor %}
+	{% endfor %}
+{% endblock %}

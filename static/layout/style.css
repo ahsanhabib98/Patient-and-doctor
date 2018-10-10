@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-color:white;
+
+}
+
+
+.top-nav
+{
+	padding-top: 2%;
+	background-color: white
+}
+ .top-header-left{
+	
+    
+    float: left
+}
+
+.top-header-left img:hover{
+	opacity: 0.4;
+}
+
+/* header logo part end*/
+/*top-header-right login signup part*/
+.top-header-right{
+	float: right
+}
+/* top header right login and sign up end */
+
+
+/* nav bar Start */
+
+
+.nav-item{
+padding-right: 30px
+
+}
+
+
+ 
+
+.navbar{
+	background-color: #186A3B
+}
+
+
+.first-row{
+	padding-top: 5%
+}
+
+.left-col{
+	padding-left: 30%
+}
+
+.second-row{
+	padding-left: 20%
+}
+
+/* Footer End*/
+.treatment-first-row{
+	padding-top: 40px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.treatment-second-row{
+	padding-top: 40px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.treatment-third-row{
+	padding-top: 40px;
+}
+.treatment-fourth-row{
+	padding-top: 40px;
+}
+.treatment-fifth-row{
+	padding-top: 40px;
+}
+.trearment-six-row{
+	padding-top: 40px;
+}
+.symptoms-first-row
+{
+	padding-top: 40px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.login-form
+{
+	padding-left: 30%;
+	padding-right: 30%;
+	padding-bottom: 10%;
+}
+.signup-page{
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 10%;
+	padding-top: 10px;
+}
+
+.my_health-page{
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 10%;
+	padding-top: 10px;
+}
+.health_page{
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 10%;
+	padding-top: 10px;
+}
+
+.patient_page{
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 10%;
+	padding-top: 10px;
+}
+
+/* Footer start
+.footer{
+    background-color: #083D41  ;
+	padding: 60px;
+	padding-bottom: 0px;
+    list-style-type: none;
+    text-align: center;
+    margin: 0px;
+    border: 0;
+
+    overflow: hidden;
+}
+
+
+
+
+/* Footer End*/
+

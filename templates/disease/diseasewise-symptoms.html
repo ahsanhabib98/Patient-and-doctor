@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<h1>What is {{disease.name}} ?</h1>
+	<h2>Patient: {{patients_num}}</h2>
+	<h2>{{disease.details}}</h2>
+	{% for symptom in symptoms %}
+		<h3><a href="{% url 'symptom-detail' symptom.slug %}">{{symptom.name}}</a></h3>
+		{% for medicine in symptom.medicines.all %}
+			<p><a href="{% url 'medicinewise-symptom' medicine.id %}">{{medicine.name}}</a></p>
+		{% endfor %}
+	{% endfor %}
+{% endblock %}

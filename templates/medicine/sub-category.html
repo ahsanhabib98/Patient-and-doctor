@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<h1>What is {{subcategory.name}}?</h1>
+	<h2>Patient: {{patients_num}}</h2>
+	<h2>{{subcategory.details}}</h2>
+	{% for medicine in subcategory.medicines.all %}
+		<h3><a href="{% url 'medicinewise-symptom' medicine.id %}">{{medicine.name}}</a></h3>
+	{% endfor %}
+{% endblock %}

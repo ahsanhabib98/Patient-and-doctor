@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<h1>Welcome patient.</h1>
+	<h1>You have no profile. <a href="{% url 'patient-create' %}">Create</a> your profile..</h1>
+{% endblock %}
